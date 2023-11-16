@@ -13,6 +13,9 @@ button {
 a {
   text-decoration: none;
 }
+li {
+  list-style: none;
+}
 :root {
   --background-color: #edf0f7ff;
   --text-color: #083d94ff;
@@ -25,71 +28,37 @@ body {
   background-size: cover;
   background-position: center; */
   background-color: var(--background-color);
+  /* display: flex;
+  flex-direction: column; */
 }
 
 /* <=====================================================================================================================================================>
 <====================================================== Navbar CSS Start               ======================================================================================> */
 
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
+.navbar {
   width: 100%;
-  padding: 0px 7%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  z-index: 5;
+  justify-content: space-between;
+  position: fixed;
+  padding: 0px 5%;
+  background: #bebebe1a;
+  backdrop-filter: blur(40px);
+  z-index: 999;
+}
+.nav-items ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+ul li {
 }
 
-.header::before {
-  content: "";
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(50px);
-  z-index: -1;
-}
-
-.header::after {
-  content: "";
-  top: 0;
-  left: -100%;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.4),
-    transparent
-  );
-  transition: 0.8s;
-}
-
-.header:hover::after {
-  left: 100%;
-}
-.header .logo img {
+.navbar .logo img {
   margin-top: 5px;
 }
-.nav-item {
-  position: relative;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 25px;
-  letter-spacing: -0.13px;
-  text-decoration: none;
-  margin-left: 2.5rem;
-  transition: all 0.5s ease;
-}
-li {
-  list-style: none;
-}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -130,17 +99,17 @@ li {
 }
 
 .nav-item:hover {
-  color: skyblue;
+  color: var(--hover);
 }
 
-.icons {
+/* .icons {
   position: absolute;
   right: 5%;
   font-size: 2.3rem;
   color: #fff;
   cursor: pointer;
   display: none;
-}
+} */
 
 #check {
   display: none;
@@ -210,6 +179,8 @@ li {
 /* #################################################### Home CSS Start ########################################################## */
 .home {
   display: flex;
+  min-height: 100vh;
+
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
@@ -238,6 +209,7 @@ h2 {
 }
 .home-left button {
   padding: 15px;
+  gap: 5px;
   background-color: var(--text-color);
   color: #fff;
   margin-top: 20px;
@@ -247,12 +219,7 @@ h2 {
   min-width: 60px;
   cursor: pointer;
 }
-.btn {
-  cursor: pointer;
-}
-.home-left button:hover {
-  background-color: var(--hover);
-}
+
 .home-left button i {
   font-size: 20px;
 }
@@ -372,3 +339,175 @@ h2 {
 }
 /* ############################################################################################################## */
 /* #################################################### Home CSS END ########################################################## */
+
+/* <!-- ########################################## Download Mobile App Section ########################################## --> */
+.mobile-app {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  margin: 0% 15%;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.app-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  gap: 20vmin;
+}
+.app-content .app-text {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.app-content .app-text h3 {
+  font-size: 5vmin;
+}
+
+.app-content .app-text h3 span {
+  color: var(--text-color);
+}
+.app-content .app-text button {
+  padding: 10px;
+  background-color: #000000;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: larger;
+  gap: 10px;
+  width: 50%s;
+}
+
+.app-mocup {
+  display: flex;
+  align-items: center;
+  display: flex;
+}
+.app-feature-box {
+  display: flex;
+  gap: 20px;
+
+  flex-direction: column;
+}
+.app-feature-box li i {
+  color: rgb(156, 255, 7);
+  font-size: 20px;
+}
+/* <!-- ########################################## Download Mobile App Section ########################################## --> */
+
+/* ***********************************************##************************************************* */
+
+/* <!-- ########################################## Feedback Section Start########################################## --> */
+
+.feedback {
+  /* display: flex;
+  flex-direction: column; */
+}
+.feedback-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 30px;
+  margin: 5% 0%;
+  background-color: var(--text-color);
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.feedback .feedback-text h3 {
+  font-size: 5vmin;
+}
+.feedback .feedback-text p {
+  font-size: 20px;
+}
+
+.feedback-slider {
+  /* display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh; */
+  width: 100%;
+  background-color: #3681fa;
+  overflow: hidden;
+}
+
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  height: 300px;
+  background: #ccc;
+  text-align: center;
+  line-height: 300px;
+}
+
+a.control_prev,
+a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.control_prev:hover,
+a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
+}
+
+/* <!-- ########################################## Feedback Section End ########################################## --> */
