@@ -15,8 +15,10 @@ a {
 }
 li {
   list-style: none;
+  cursor: pointer;
 }
 :root {
+  --box-color: #fff;
   --background-color: #edf0f7ff;
   --text-color: #083d94ff;
   --hover: #3681fa;
@@ -28,6 +30,7 @@ body {
   background-size: cover;
   background-position: center; */
   background-color: var(--background-color);
+  width: 100%;
   /* display: flex;
   flex-direction: column; */
 }
@@ -42,17 +45,15 @@ body {
   justify-content: space-between;
   position: fixed;
   padding: 0px 5%;
-  background: #bebebe1a;
+  background: #d6d6d61a;
   backdrop-filter: blur(40px);
-  z-index: 999;
+  z-index: 1;
 }
 .nav-items ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
-}
-ul li {
 }
 
 .navbar .logo img {
@@ -66,7 +67,7 @@ ul li {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: var(--box-color);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 999;
@@ -102,74 +103,13 @@ ul li {
   color: var(--hover);
 }
 
-/* .icons {
-  position: absolute;
-  right: 5%;
-  font-size: 2.3rem;
-  color: #fff;
-  cursor: pointer;
+/* ################## Menu button ############### */
+.menu-button {
+  font-size: 25px;
+  font-weight: bolder;
+  color: var(--text-color);
+  display: flex;
   display: none;
-} */
-
-#check {
-  display: none;
-}
-
-@media (max-width: 1088px) {
-  .header {
-    padding: 1.3rem 5%;
-  }
-}
-
-@media (max-width: 975px) {
-  .icons {
-    display: inline-flex;
-  }
-
-  #check:checked ~ .icons #menu-icon {
-    display: none;
-  }
-
-  .icons #close-icon {
-    display: none;
-  }
-
-  #check:checked ~ .icons #close-icon {
-    display: block;
-  }
-
-  .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(50px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-
-  #check:checked ~ .navbar {
-    height: 17.7rem;
-  }
-
-  .nav-item {
-    display: block;
-    font-size: 1.1rem;
-    margin: 1.5rem 0;
-    text-align: center;
-    transform: translateY(-50px);
-    opacity: 0;
-    transition: all 0.3s ease;
-  }
-
-  #check:checked ~ .navbar a {
-    transform: translateY(0);
-    opacity: 1;
-    transition-delay: calc(0.15s * var(--i));
-  }
 }
 
 /* <=====================================================================================================================================================>
@@ -179,7 +119,6 @@ ul li {
 /* #################################################### Home CSS Start ########################################################## */
 .home {
   display: flex;
-  min-height: 100vh;
 
   justify-content: space-between;
   align-items: center;
@@ -211,7 +150,7 @@ h2 {
   padding: 15px;
   gap: 5px;
   background-color: var(--text-color);
-  color: #fff;
+  color: var(--box-color);
   margin-top: 20px;
   display: flex;
   align-items: center;
@@ -347,7 +286,7 @@ h2 {
   align-items: center;
   justify-content: center;
   margin: 0% 15%;
-  background-color: #fff;
+  background-color: var(--box-color);
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -375,7 +314,7 @@ h2 {
   padding: 10px;
   background-color: #000000;
   border-radius: 30px;
-  color: #fff;
+  color: var(--box-color);
   font-weight: 500;
   text-align: center;
   display: flex;
@@ -395,6 +334,7 @@ h2 {
   display: flex;
   gap: 20px;
 
+  color: var(--text-color);
   flex-direction: column;
 }
 .app-feature-box li i {
@@ -420,7 +360,7 @@ h2 {
   padding: 30px;
   margin: 5% 0%;
   background-color: var(--text-color);
-  color: #fff;
+  color: var(--box-color);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -437,7 +377,7 @@ h2 {
   align-items: center;
   justify-content: center;
   margin: 0% 10%;
-  background-color: #fff;
+  background-color: var(--box-color);
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -467,9 +407,54 @@ h2 {
 /* <!-- ########################################## Feedback Section End ########################################## --> */
 /* <!-- ########################################## Contact Section Start ########################################## --> */
 .Contact-form {
-  padding: 10% 15%;
+  padding: 5% 5%;
   margin: 10% 10%;
-  background-color: #fff;
+  background-color: var(--box-color);
+  display: flex;
+
+  gap: 5rem;
+}
+.Contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.Contact-form form input {
+  padding: 10px;
+  outline: none;
+}
+.Contact-form .send-button {
+  padding: 10px;
+  background-color: var(--hover);
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  transition: smooth;
+}
+.Contact-form .send-button:hover {
+  background-color: var(--text-color);
+}
+textarea {
+  outline: none;
+  padding: 10px;
+  color: #000000;
+}
+.Contact-form form label {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  appearance: textfield;
 }
 
 /* <!-- ########################################## Contact Section End ########################################## --> */
@@ -477,6 +462,7 @@ h2 {
   padding: 0% 7%;
   color: #fff;
   background-color: rgb(35, 35, 35);
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -498,4 +484,38 @@ h2 {
   flex-direction: column;
   gap: 20px;
 }
+.logo-about span {
+  display: flex;
+  gap: 20px;
+}
+.logo-about span i {
+  font-size: 30px;
+  color: #fff;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #9a9a9a;
+  padding: 20px 20px;
+  /* background-color: #646464; */
+}
+.footer-bottom a {
+  color: #fff;
+}
 /* <!-- ########################################## Footer Section  Start ########################################## --> */
+
+/* ########################## Icons#####################
+*/
+
+/* .whatsapp-icon {
+  z-index: 999;
+  display: flex;
+  padding: 32rem 10px;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: fixed;
+  gap: 70%;
+}
+.header .whatsapp-icon i {
+  color: green;
+} */
