@@ -1,0 +1,54 @@
+@media (max-width: 1088px) {
+  .navbar {
+    width: 100%;
+    position: fixed;
+    padding: 0px 7%;
+  }
+  .nav-items ul {
+    display: none;
+  }
+  .menu-button {
+    display: flex;
+  }
+  .home {
+    flex-wrap: wrap;
+    padding: 7rem 7%;
+    width: 100%;
+  }
+  .mobile-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .app-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .app-content {
+    gap: 10vmin;
+  }
+  .app-feature-box {
+    display: none;
+  }
+  .feedback-text {
+    min-width: 100%;
+  }
+  .swiper-slide {
+    flex-wrap: wrap-reverse;
+  }
+  .footer {
+    width: 100%;
+  }
+  .footer-main {
+    flex-wrap: wrap;
+  }
+  .Contact-form {
+    flex-wrap: wrap;
+  }
+  .footer-bottom {
+    flex-wrap: wrap;
+  }
+}
