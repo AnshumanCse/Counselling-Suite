@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Counselling Suite</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- <link rel="stylesheet" href="footer.css" /> -->
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="shortcut icon" href="assets/cs-logo2.png" type="image/x-icon" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -14,89 +15,109 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    /> -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
   <body>
-    <header class="navbar">
-      <div class="logo">
-        <a href="#"><img src="assets/logo.png" alt="logo" height="50px" /></a>
-      </div>
-      <nav class="nav-items">
-        <ul>
-          <li class="dropdown">
-            Counselling Types<i class="ri-arrow-down-s-line"></i>
-            <div class="dropdown-content">
-              <a href="#">• JOSAA</a>
-              <a href="#">• WBJEE</a>
-              <a href="#">• CSAB</a>
-              <a href="#">• COMEDK</a>
-              <a href="#">• NEET</a>
-              <a href="#">• CUET</a>
-              <a href="#">• View more</a>
-            </div>
-          </li>
-          <li>
-            <a href="#" class="nav-item">Expert Counselors</a>
-          </li>
-          <li>
-            <a href="#" class="nav-item">Refund and Cancellation</a>
-          </li>
-          <li>
-            <a href="#" class="nav-item">About </a>
-          </li>
-          <li>
-            <a href="#" class="nav-item">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <div class="home">
-      <div class="home-left">
-        <h1>Career Success with Counselling Suite...</h1>
-        <h2>
-          <a
-            href=""
-            class="typewrite"
-            data-period="2000"
-            data-type='["Empowering students", "Trusted by 10000+ students.", "Fully Safe and Secure", "Available 24X7." ]'
-          >
-            <span class="wrap"></span>
-          </a>
-        </h2>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
-          maiores ipsa tenetur consequatur, quasi quisquam a hic aliquam
-          exercitationem laboriosam. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Architecto adipisci quo debitis inventore quos qui
-          fugiat non deserunt eum totam.
-        </p>
-        <a href="#">
-          <button class="btn">
-            Get Started<i class="ri-arrow-right-line"></i>
-          </button>
-        </a>
-      </div>
-      <div class="home-right">
-        <div class="home-img">
-          <img src="assets/young-boy-studying-removebg.png" alt="rocket" />
-          <!-- <img src="/assets/rocker.webp" alt="" height="200px" /> -->
+    <section class="header">
+      <header class="navbar">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="assets/logo.png" alt="logo" height="50px"
+          /></a>
         </div>
-      </div>
-      <section class="sticky">
-        <div class="bubbles">
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-        </div>
-      </section>
-    </div>
+        <nav class="nav-items">
+          <ul class="nav-items">
+            <li class="dropdown">
+              Counselling Types<i class="ri-arrow-down-s-line"></i>
+              <div class="dropdown-content">
+                <a href="councellingForm.html" target="-main">• JOSAA</a>
+                <a href="/">• WBJEE</a>
+                <a href="councellingForm.html">• CSAB</a>
+                <a href="councellingForm.html">• COMEDK</a>
+                <a href="councellingForm.html">• NEET</a>
+                <a href="councellingForm.html">• CUET</a>
+                <a href="councellingForm.html">• View more</a>
+              </div>
+            </li>
+            <li>
+              <a href="/Expert-Councellor.htm" class="nav-item"
+                >Expert Counselors</a
+              >
+            </li>
+            <li>
+              <a href="RefundAndCancellationPolicy.htm" class="nav-item"
+                >Refund and Cancellation</a
+              >
+            </li>
+            <li>
+              <a href="about.htm" class="nav-item">About </a>
+            </li>
+            <li>
+              <a href="contact.htm" class="nav-item">Contact</a>
+            </li>
+          </ul>
+          <span class="menu-button">
+            <i class="ri-menu-fold-line menu"></i>
+          </span>
+        </nav>
+      </header>
+    </section>
+    <!-- #################### Home section START ####################### -->
 
+    <section>
+      <div class="home">
+        <div class="home-left">
+          <h1>Career Success with Counselling Suite...</h1>
+          <h2>
+            <a
+              href=""
+              class="typewrite"
+              data-period="2000"
+              data-type='["Empowering students", "Trusted by 10000+ students.", "Fully Safe and Secure", "Available 24X7." ]'
+            >
+              <span class="wrap"></span>
+            </a>
+          </h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
+            maiores ipsa tenetur consequatur, quasi quisquam a hic aliquam
+            exercitationem laboriosam. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Architecto adipisci quo debitis inventore quos qui
+            fugiat non deserunt eum totam.
+          </p>
+          <a href="#">
+            <button class="btn">
+              Get Started<i class="ri-arrow-right-line"></i>
+            </button>
+          </a>
+        </div>
+        <div class="home-right">
+          <div class="home-img">
+            <img src="assets/young-boy-studying-removebg.png" alt="rocket" />
+            <!-- <img src="/assets/rocker.webp" alt="" height="200px" /> -->
+          </div>
+        </div>
+        <section class="sticky">
+          <div class="bubbles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <!-- #################### Home section end ####################### -->
     <!-- ########################################## Download Mobile App Section
     ########################################## -->
     <section class="mobile-app">
@@ -135,8 +156,13 @@
           </div>
         </div>
       </div>
+      <!-- <div class="whatsapp-icon">
+        <a href="#">
+          <img src="/assets/whatsapp.png" alt="whatsapp" height="50px" /> </a
+        ><i class="ri-chat-voice-line"></i>
+      </div> -->
     </section>
-
+    <!-- ################################################ Feedback ####################### -->
     <section class="feedback">
       <div class="feedback-text">
         <h3>User's Feedback</h3>
@@ -191,18 +217,30 @@
     </section>
     <!-- ########################################## Contact Form Start ################################################ -->
     <section class="Contact-form">
-      <h1>Get a call back!</h1>
-      <form action="https://formspree.io/f/maygzbpa" method="POST">
-        <label>
-          Your email:
-          <input type="email" name="email" required />
+      <div class="form-text">
+        <h1>Get a call back!</h1>
+        <img src="assets/contact-us.png" alt="contact-us" height="200px" />
+      </div>
+      <form onsubmit="onFormSubmit()">
+        <label for="input">
+          <input type="text" placeholder="Name" required />
+          <input type="email" placeholder="Email" required />
+          <input type="number" placeholder="phone" required />
+          <input type="text" placeholder="Location" />
         </label>
-        <label>
-          Your message:
-          <textarea name="message" required></textarea>
-        </label>
-        <!-- your other form fields go here -->
-        <button type="submit">Send</button>
+        <textarea
+          name="text"
+          id=""
+          rows="10"
+          cols="10"
+          placeholder="Message"
+        ></textarea>
+        <input
+          type="button"
+          value="Send"
+          onclick="send()"
+          class="send-button"
+        />
       </form>
     </section>
     <!-- ########################################## Contact Form END ################################################ -->
@@ -226,14 +264,15 @@
       <div class="footer-main">
         <ul class="logo-about">
           <li>
-            <a href="#"><img src="/assets/logo.png" alt="" height="50px" /></a>
+            <a href="#"><img src="assets/logo.png" alt="" height="100px" /></a>
           </li>
 
           <li>Follow Us</li>
           <span
-            ><i class="ri-linkedin-box-fill"></i>
-            <i class="ri-facebook-circle-fill"></i
-            ><i class="ri-twitter-x-line"></i><i class="ri-instagram-line"></i
+            ><a href="#"><i class="ri-linkedin-box-fill"></i> </a>
+            <a href="#"> <i class="ri-facebook-circle-fill"></i> </a>
+            <a href="#"><i class="ri-twitter-x-line"></i></a>
+            <a href="#"> <i class="ri-instagram-line"></i> </a
           ></span>
         </ul>
         <ul class="councellings-list-1">
@@ -264,10 +303,22 @@
           <li>GATE</li>
         </ul>
       </div>
-      <div class="footer-bottom"></div>
+      <div class="footer-bottom">
+        <p>
+          Copyright © 2023 COUNSELLING SUITE PRIVATE LIMITED. All Rights
+          Reserved.
+        </p>
+        <a href="#">Privacy and Policy</a>
+        <a href="#">Terms and conditions</a>
+        <a href="#">About Us</a>
+      </div>
     </section>
+
     <!-- ########################################## Footer END ################################################ -->
 
     <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
   </body>
 </html>
