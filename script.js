@@ -57,3 +57,85 @@ window.onload = function () {
   css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
   document.body.appendChild(css);
 };
+
+// ########################################### Slider JS ########################################
+// ########################################### Slider JS ########################################
+
+jQuery(document).ready(function ($) {
+  setInterval(function () {
+    moveRight();
+  }, 3000);
+
+  var slideCount = $("#slider ul li").length;
+  var slideWidth = $("#slider ul li").width();
+  var slideHeight = $("#slider ul li").height();
+  var sliderUlWidth = slideCount * slideWidth;
+
+  $("#slider").css({ width: slideWidth, height: slideHeight });
+
+  $("#slider ul").css({ width: sliderUlWidth, marginLeft: -slideWidth });
+
+  $("#slider ul li:last-child").prependTo("#slider ul");
+
+  function moveLeft() {
+    $("#slider ul").animate(
+      {
+        left: +slideWidth,
+      },
+      200,
+      function () {
+        $("#slider ul li:last-child").prependTo("#slider ul");
+        $("#slider ul").css("left", "");
+      }
+    );
+  }
+
+  function moveRight() {
+    $("#slider ul").animate(
+      {
+        left: -slideWidth,
+      },
+      200,
+      function () {
+        $("#slider ul li:first-child").appendTo("#slider ul");
+        $("#slider ul").css("left", "");
+      }
+    );
+  }
+
+  $("a.control_prev").click(function () {
+    moveLeft();
+  });
+
+  $("a.control_next").click(function () {
+    moveRight();
+  });
+});
+
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Contact Form %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+function send() {
+  Email.send({
+    Host: "smtp.elasticemail.com",
+    Username: "work.amoebatechnocrats@gmail.com",
+    Password: "7CEDE0732F06F4FA30C451D1223936C4ABEA",
+    To: "amoebatechnocrats02@gmail.com",
+    From: "work.amoebatechnocrats@gmail.com",
+    Subject: "This is the subject",
+    Body: "And this is the body",
+  }).then((message) => {
+    if (message == "OK") {
+      swal("Successfull", "Your Data Successfull Received", "success");
+    } else {
+      swal("Something Wrong", "Your Data is not Received", "error");
+    }
+  });
+}
+
+//Email:- work.amoebatechnocrats@gmail.com
+// Password: 7CEDE0732F06F4FA30C451D1223936C4ABEA
+function onFormSubmit(e) {
+  e.preventDefault();
+
+  // your Javascript code here
+}
